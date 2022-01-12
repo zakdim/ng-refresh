@@ -16,9 +16,13 @@ export class ProductsComponent {
     }, 3000);
   }
 
-  onAddProduct() {
-    if (this.productName) {
-      this.products.push(this.productName);
+  onAddProduct(form) {
+    // if (this.productName) {
+    //   this.products.push(this.productName);
+    // }
+    console.log(form);
+    if (form.valid) {
+      this.products.push(form.value.productName);
     }
   }
 
