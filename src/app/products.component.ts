@@ -5,5 +5,12 @@ import { Component } from "@angular/core";
   templateUrl: './products.component.html'
 })
 export class ProductsComponent {
+  productName = 'A Book';
+  isDisabled = true;
 
+  constructor() {
+    setTimeout(() => {
+      this.isDisabled = false;
+    }, 3000);
+  }
 }
