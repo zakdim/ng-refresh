@@ -7,10 +7,18 @@ import { Component } from "@angular/core";
 export class ProductsComponent {
   productName = 'A Book';
   isDisabled = true;
+  products = ['A Boot', 'A Tree'];
+
 
   constructor() {
     setTimeout(() => {
       this.isDisabled = false;
     }, 3000);
+  }
+
+  onAddProduct() {
+    if (this.productName) {
+      this.products.push(this.productName);
+    }
   }
 }
